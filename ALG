@@ -1,0 +1,15 @@
+// Declaração e entrada de dados.
+Scanner ent = new Scanner(System.in);
+float vet[] = new float[3];
+int pos []= new int[vet.length];
+float media=0;
+System.out.println("-------DIGITE A NOTA DA PROVA DO ALUNO--------");
+
+//Porcessamento dos dados.
+for(int i=0; i<vet.length; i++){
+ vet[i]=ent.nextFloat();
+ //scanner.close();
+  if(vet[i]>=5){media+=vet[i];
+  pos[i]=i;System.out.println("A posição é "+i);}else{media+=vet[i];};};
+  System.out.println("A media da turma é "+media/vet.length);
+  for(int j=0; j<pos.length; j++){if(pos[j]>=5){System.out.println("vet "+j);}}
