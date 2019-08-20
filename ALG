@@ -1,13 +1,52 @@
-Analise proposta
-char a = 100;
-char b = 100;
-char c = a+b;
+import java.util.Scanner;
 
-resultado esperado é c=200 porém vemos o resultado -56, vamos ver oque acontece.
+public class Program {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Circulo c = new Circulo();
+        Ponto p = new Ponto();
+        System.out.println("Informe o Ponto ! ");
+        p.setPonto(sc.nextDouble());
+        System.out.println("Informe o Raio ! ");
+        c.setRaio(sc.nextDouble());
+        System.out.println(p.getPonto());
+        System.out.println(c.getRaio());
+c.CriarCirculo(5,10);
 
-1 char possui 1 byte = 8 bits.
-dentro do tipo de dados (char) temos a possibilidade de representar números positivos e negativos dentro da faixa
- −128 até 127 então quando somamos a variável a+b e armazenamos em c oque realmente acontece é o seguinte:
-primeiro é utilizado a faixa positiva do byte ou seja de 0 até 127, logo não é possível armazenar o resultado 200 podemos amarzenar apenas parte desse valor que é igual a 128, (200-128) =72  o valor que fica faltando a ser armazenado (72) é reduzido da parte negativa do byte ou seja 72-128 que é igual a -56 sendo este o resultado final apresentado.
-De forma geral oque acontece aqui é a falta de recursos para o armazenamento do número em sua totalizade, como o sistema é preparado para guardar uma quantidade finita de dados positivos e negativos isso é o que ocorre quando o dado excede o espaço disponível utilizando da parte negativa para compor o espaço necessário.
-Uma operação correta do ponto de vista computacional porém não tão correto se pensarmos no resultado que desejamos obter realmente.
+        sc.close();
+    }
+}
+
+
+public class Circulo {
+    
+    private double raio;
+    private Ponto ponto;
+
+    public void setRaio(double raio){
+        this.raio=raio;
+    }
+
+    public double getRaio(){
+        return raio;
+    }
+public void CriarCirculo(double a , double b){
+      Circulo c2 = new Circulo();
+    System.out.println(c2);
+}
+
+    @Override
+    public String toString() {
+        return "Circulo{" +
+                "raio=" + raio +
+                ", ponto=" + ponto +
+                '}';
+    }
+}
+
+public class Ponto {
+    private double ponto;
+    public void setPonto(double ponto){this.ponto=ponto;}
+    public double getPonto(){return ponto;}
+}
+
