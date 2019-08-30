@@ -1,74 +1,69 @@
-public class Coeficientes {
-
-	private float a;
-	private float b;
-	private float c;
 
 
-	
-	public float getA() {
-		return a;
-	}
-
-	public void setA(float a) {
-		this.a = a;
-	}
-
-	public float getB() {
-		return b;
-	}
-
-	public void setB(float b) {
-		this.b = b;
-	}
-
-	public float getC() {
-		return c;
-	}
-
-	public void setC(float c) {
-		this.c = c;
-	}
-
-	
-}
-
-
-
-
-import java.util.Scanner;
-
-public class Principal {
+public class Program {
 
 	public static void main(String[] args) {
-		float temp = 0;
-		Scanner sc = new Scanner(System.in);
-		Coeficientes c = new Coeficientes();
+		Array a = new Array();
 		
-		System.out.println("Informe 1º COEFICIENTE");
-		temp=sc.nextFloat();
-		if(temp!=0){c.setA(temp);}else {
-			System.out.println("Informe um número diferento de 0");}
 		
-		System.out.println("Informe 2º COEFICIENTE");
-	    c.setB(sc.nextFloat());
-	    
-	    System.out.println("Informe 3º COEFICIENTE");
-	    c.setC(sc.nextFloat());
-	    
-	    
-	    
-	    System.out.println(c.getA());
-	    System.out.println(c.getB());
-	    System.out.println(c.getC());
-sc.close();
+		//a.buscarValor(1);
+		
+		
+			
+	
+
+
+		System.out.println(a.buscarValor(1));
+		
+		
+		
+	}
 	}
 
-}
-////////////////////////
-import java.util.Scanner;
 
-public class LerCoeficiente {
+//buscar inserir remover
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+
+
+public class Array {
+
+	int vet[] = { 3, 1, 8 };
+	int aux[] = {};
+	//int valor = 0;
+	int temp =0;
+	public int buscarValor(int valor) {
+		
+		for (int i = 0; i < vet.length; i++) {
+			
+			if (vet[i] == valor) {
+				return i;
+			}
+			
+			
+		}
+		return -1;
+		
+	}
+
+	
+	
 	
 	
 }
+
+
+
+
+	
+
+
+
+
+
