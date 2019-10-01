@@ -1,0 +1,157 @@
+Estruturas Homogêneas
+1
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		 int tamanho = 5;
+		 float notas[] = new float[tamanho];
+		 float media=0;
+		 int soma = 0;
+
+
+
+		for(int i=0; i<tamanho; i++) {
+			System.out.println("Informe a nota do aluno "+i);
+			notas[i]=sc.nextFloat();
+			soma+=notas[i];
+		}
+		media=soma/tamanho;
+		
+		for(int i=0; i<tamanho; i++) {
+			if(notas[i]>media) {System.out.print("media "+media);System.out.println("posição "+i);}
+			
+			
+		}
+		sc.close();
+	}
+	
+
+}
+
+2
+	public class Principal {
+	
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+		
+			int n=5;
+			float array[] = new float[n];
+			int maior, menor;
+			
+			for(int i = 0; i<n; i++) {
+				System.out.println("Informe o valor");
+				array[i]=sc.nextFloat();
+			}
+			
+			maior=0;
+			menor=0;
+			for(int i = 0; i<n-1; i++) {
+				if(array[i]>array[maior]) {
+					maior=i;
+				}
+				
+				if(array[i]<array[menor]) {
+					menor=i;
+				}
+				
+				}
+			float amplitude=array[maior]-array[menor];
+			System.out.println("Amplitude = "+amplitude);
+			System.out.println("Posição maior elemento "+maior);
+			System.out.println("Posição menor elemento "+menor);
+			
+			sc.close();
+			}
+			
+			
+		
+		
+	
+	}
+
+3
+public class Principal {
+
+	public static void main(String[] args) {
+		
+
+		int mat[][] = new int[20][10];
+		int soma[] = new int[20];
+		int maior = 0;
+		int menor = 0;
+
+		for (int i = 0; i < 19; i++) {
+			soma[i] = 0;
+			for (int j = 0; j < 9; i++) {
+				soma[i] = soma[i] + mat[i][j];
+			}
+
+			if (soma[i] > soma[maior]) {
+				maior = i;
+			} else if (soma[i] < soma[menor]) {
+				menor = i;
+			}
+
+		}
+		
+		for(int i=0; i<19; i++) {
+			System.out.println("Soma da linha "+i);
+			System.out.println(" = "+soma[i]);
+			
+			
+		}
+		System.out.println("Maior soma = "+soma[maior]);
+		System.out.println("Na linha = "+soma[maior]);
+		
+		System.out.println("menor soma = "+soma[menor]);
+		System.out.println("Na linha = "+soma[menor]);
+		
+	}
+
+}
+
+4
+	public class Principal {
+
+	public static void main(String[] args) {
+		
+int mat[][] = new int[4][5];
+
+for(int l=0; l<3; l++) {
+	for(int col=0; col<4; col++) {
+		mat[l][col]=l*5+col+1;	}
+}
+	
+for(int l=0; l<3; l++) {
+	for(int col=0; col<4; col++) {
+		System.out.print(mat[l][col]+" , ");	}
+}	
+
+
+
+	}
+}
+
+6  ////////não acabado
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+int n=20;
+int aux=0;
+int mat[]=new int[n];
+
+for(int i =0; i<n-1; i++) {
+	System.out.println("Informe um número");
+	mat[i]=sc.nextInt();
+	
+}
+
+for(int i =0; i<n/2-1; i++) {
+	aux=mat[i];
+	mat[i]=[n-i-1];
+}
+sc.close();
+	}
+}
