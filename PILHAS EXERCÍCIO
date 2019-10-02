@@ -1,0 +1,213 @@
+Exercícios sobre
+ 
+Estruturas com Restrição de Acesso e Pilhas
+ 
+ 
+Questão 1 [Discursiva]
+Defina o que são estruturas lineares com restrição de acesso.
+Estruturas lineares com restrição de acesso ou disciplina de acesso nada mais são do
+que estruturas onde os acessos (inserções e retiradas) aos elementos ocorrem de forma restrita
+e imutável, visando a atender a uma política ou a um modelo de negócio.
+ 
+ 
+Questão 2
+A seguir são descritos algumas formas de restrição de acesso aplicadas a estruturas lineares:
+1. Estrutura linear em que todas as inserções e retiradas são realizadas apenas em um
+extremo da estrutura;
+Pilhas: caso particular de DEQUE em que as inserções e as retiradas são realizadas
+obrigatoriamente em apenas uma das extremidades, denominada topo, ou top em inglês.
+Pilhas implementam uma politica de acesso denominada LIFO, que é um acrônimo da
+expressão em inglês Last In, First Out, ou o último que chega é o primeiro a ser
+atendido. Também chamada alternativamente na literatura técnica de FILO, ou First In,
+Last Out.
+ 
+2. Estrutura linear em que as inserções podem ser realizadas em qualquer  extremo e as
+retiradas só podem ser realizadas em um dos extremos da estrutura;
+DEQUE de saída restrita: Aqui, as inserções podem ocorrer somente em ambas as
+extremidades da estrutura, mas as retiradas só ocorrem de um único lado.
+3. Estrutura linear em que as inserções e retiradas podem ser realizadas tanto num extremo
+quanto no outro extremo  da  estrutura;
+DEQUE: acrônimo da expressão em inglês Double-Ended Queue ou numa tradução
+livre, Fila de dupla extremidades. Nestas estruturas, inserções e retiradas podem ocorrer
+somente em ambos os lados ou extremidades.
+ 
+4. Estrutura linear em que todas as inserções são realizadas em um extremo e todas as
+retiradas são realizadas no outro extremo da estrutura;
+Filas: Filas é um caso particular de DEQUE em que as retiradas são realizadas somente
+em uma extremidade, denominada início, ou frente, ou front, em inglês. E as inserções
+ou entradas ocorrem obrigatoriamente no lado oposto, denominado fim, ou traseira, ou
+em inglês, rear. Filas implementam uma politica de acesso denominada FIFO, que é um
+acrônimo da expressão em inglês First In, First Out, ou o primeiro que chega é o
+primeiro a ser atendido. Alguns autores denominam esta estrutura também LILO ou Last
+In, Last Out.
+ 
+5. Estrutura linear em que a as inserções só podem ser realizadas em um extremo e as
+retiradas podem ser realizadas nos dois extremos da estrutura.
+DEQUE de entrada restrita: Nestas estruturas, as inserções podem ocorrer somente
+em uma das extremidades e as retiradas podem ocorrer somente em ambas as
+extremidades.
+As restrições de acesso acima definem, pela ordem:
+a) Pilha, fila, deque, deque de saída restrita, deque de entrada restrita;
+b) Deque de saída restrita, fila, pilha, deque, deque de entrada restrita;
+c) Deque, deque de saída restrita, deque de entrada restrita, fila, deque;
+d) Pilha, deque de saída restrita, deque, fila, deque de entrada restrita;  RESPOSTA CORRETA
+e) Pilha, deque de entrada restrita, deque, fila, deque de saída restrita;
+ 
+Questão 3
+Considere os seguintes elementos mecânicos, representados pelos símbolos abaixo:
+== tubo que permite armazenar esferas;
+&gt; válvula que permite a passagem de esferas da esquerda para direita;
+&lt; válvula que permite a passagem de esferas da direita para esquerda;
+X válvula que permite a passagem de esferas nos dois sentidos;
+| terminal que barra a passagem de esferas.
+Fazendo uma correlação entre esses elementos mecânicos e estruturas lineares com restrição
+de acesso, responda quais estruturas são representadas pelas figuras abaixo:
+1) |==X 2) X==&lt; 3) &gt;==&gt; 4) X==X 5) &lt;==X
+A sequencia correta é:
+a) Pilha, Deque de saída restrita, Fila, Deque, Deque de entrada restrita. RESPOSTA CORRETA
+b) Pilha, Fila, Deque de entrada restrita, Deque de saída restrita, Deque.
+c) Pilha, Deque de entrada restrita, Fila, Deque, Deque de saída restrita.
+d) Fila, Deque de saída restrita, Pilha, Deque, Deque de entrada restrita.
+e) Fila, Deque de entrada restria, Pilha, Deque de saída restrita, Deque.
+ 
+Questão 4 [Discursiva]
+Cite pelo menos 4 situações práticas para as quais se aplica Pilhas e sua política LIFO como
+solução.
+Fichas de pôquer numa mesa de jogo;
+Sempre que houver a necessidade de retirar uma ficha de pôquer  deve-se  retirar sempre a  que estiver no topo da pilha se a intenção  for  retirar a segunda ficha por exemplo deve-se retirar a primeira, pegar a segunda e voltar a primeira para seu lugar de origem , na prática foi feito a retirada da primeira ficha depois a retirada da segunda ficha e por fim a inclusão da primeira ficha.
+ 
+ 
+Pilhas de pratos em um buffet;
+Assumindo que temos que lavar a louça suja retiramos  sempre o prato que estiver no topo da pilha até o último prato, no momento do enxague o primeiro prato a ser ensaboado será obrigatoriamente o último a ser  enxaguado então conclui -se que a pilha de pratos limpos é inversa de quando estavam todos sujos.
+ 
+Caixas estocadas em um depósito.
+As caixas devem  ser empilhadas uma por cima da outra até a última  caixa a primeira caixa a ser  empilhada será a última a ser desempilhada pois a política LIFO garante esse comportamento.
+ 
+Histórico de páginas visitadas em um site.
+Na medida em que o usuários vai acessando  determinadas páginas de um site o navegador salva de forma sequencial cada página visitada de forma que se o usuário quiser voltar uma ou mais  páginas basta clicar no ícone de retroceder ou próximo que automaticamente o navegador irá acessar as páginas guardadas com base na lógica LIFO.
+ 
+Questão 5
+Assinale a alternativa correta: Pilha é uma estrutura de dados...
+a) cujo acesso aos seus elementos segue tanto a lógica LIFO quanto a FIFO.
+b) cujo acesso aos seus elementos ocorre de forma aleatória.
+c) que pode ser implementada somente por meio de vetores.
+d) que pode ser implementada somente por meio de listas.
+e) cujo acesso aos seus elementos segue a lógica LIFO, apenas. RESPOSTA CORRETA
+ 
+Questão 6
+O TAD Pilha, proposto na apostila, provê operações que permitem um vetor ser tratado como
+uma pilha, ou stack. A seguir são listados as funções que implementam estas operações.
+Correlacione as operações com as respectivas funções do TAD Pilha.
+1. Testar pilha vazia;
+2. Colocar um elemento no topo da pilha;
+3. Retirar o elemento do topo da pilha;
+4. Mostrar o elemento do topo da pilha sem retirá-lo;
+5. Iniciar uma pilha com topo igual a zero.
+ 
+A. void peek( ... )
+B. void push( ... )
+C. void criaPilha( ... )
+D. int empty( ... )
+E. void pop( ... )
+ 
+A relação correta é:
+a) 1-D, 2-A, 3-C, 4-E, 5-B
+b) 1-D, 2-C, 3-A, 4-B, 5-E
+c) 1-D, 2-B, 3-E, 4-A, 5-C RESPOSTA CORRETA
+d) 1-C, 2-E, 3-B, 4-A, 5-D
+e) 1-C, 2-A, 3-D, 4-E, 5-B
+ 
+Questão 7
+Considere o trecho de código C abaixo, para uma pilha armazenando valores inteiros.
+ 
+Pilha p;
+int erro, x;
+criaPilha(&amp;p);
+push (3, &amp;p, &amp;erro);
+push(12, &amp;p, &amp;erro);
+pop(&amp;p, &amp;x, &amp;erro);
+peek(&amp;p, &amp;x, &amp;erro);
+push(2, &amp;p, &amp;erro);
+push(x, &amp;p, &amp;erro);
+push(5, &amp;p, &amp;erro);
+pop(&amp;p, &amp;x, &amp;erro);
+Depois da execução do código acima, qual será o conteúdo da pilha p (considere seu topo à
+esquerda e base à direita) e da variável x?
+a) p = { 3, 12, 2 } x = 3
+b) p = { 3, 2, 3 } x = 5 RESPOSTA CORRETA
+c) p = { 2, 12, 3 } x = 12
+d) p = { 5, 2, 12, 3} x = 5
+e) p = { 5, 2, 3 } x = 12
+ 
+Questão 8
+UFF 2009 - Técnico de Laboratório – Informática
+Na estrutura de dados tipo pilha, há duas operações básicas para empilhamento e
+desempilhamento. Essas operações são conhecidas como:
+a) PUSH e PULL;
+b) PULL e POP;
+c) HEAP e POP;
+d) Base e Topo;
+e) PUSH e POP;  RESPOSTA CORRETA
+ 
+Questão 9
+ESAF - 2010 - MPOG - Analista de Planejamento e Orçamento - Tecnologia da Informação.
+Assinale a alternativa correta. No contexto de estrutura de dados, uma pilha é...
+a) uma lista do tipo LILO.
+b) uma lista do tipo FIFO.
+c) um tipo de lista linear em que as operações de inserção e remoção são realizadas na
+extremidade denominada topo. RESPOSTA CORRETA
+d) um tipo de lista linear em que as operações de inserção e remoção são realizadas
+aleatoriamente.
+e) um tipo de lista linear em que as operações de inserção são realizadas em uma
+extremidade e as operações de remoção são realizadas em outra extremidade.
+ 
+Questão 10
+Perito Criminal da Polícia Civil do Estado do Rio de Janeiro – Engenharia da Computação e
+Informática – 2008
+Quadro I - Operações sobre Pilha
+Operações básicas Significado
+Push(P,x) insere um elemento qualquer x na pilha P
+Pop(P) remove o elemento de topo da pilha P
+Top(P) acessa, sem remover, o elemento de topo da pilha P
+ 
+Quadro II – sequência de operações
+Push(POLICIAL_CIVIL, HARDWARE)
+Push(POLICIAL_CIVIL, SOFTWARE)
+POP(POLICIAL_CIVIL)
+Push(POLICIAL_CIVIL, INTERNET)
+TOP(POLICIAL_CIVIL)
+Push(POLICIAL_CIVIL, SEGURANCA)
+POP(POLICIAL_CIVIL)
+Push(POLICIAL_CIVIL, TOP(POLICIAL_CIVIL))
+Push(POLICIAL_CIVIL, POP(POLICIAL_CIVIL))
+Push(POLICIAL_CIVIL, REDES)
+POP(POLICIAL_CIVIL)
+Push(POLICIAL_CIVIL, TOP(POLICIAL_CIVIL))
+Considere a estrutura de dados PILHA, inicialmente vazia, suportando três operações básicas,
+conforme definidas no Quadro I e a sequência de operações descritas no Quadro II. Após a
+execução da última operação, o elemento de topo da pilha será igual a:
+a) REDES.
+b) INTERNET. RESPOSTA CORRETA
+c) SOFTWARE.
+d) SEGURANCA.
+e) CRIPTOGRAFIA
+Questão 11 [Discursiva]
+O fragmento de programa abaixo manipula uma pilha de objetos do tipo char.  (A
+função espia() devolve uma cópia do topo da pilha, mas não tira esse elemento da pilha.) 
+ 
+if(pilhavazia())
+empilha (&#39;B&#39;);
+else{
+if (espia() != &#39;A&#39;)
+empilha (&#39;B&#39;);
+else{
+while(!pilhavazia () &amp;&amp; espia() == &#39;A&#39;)
+desempilha ();
+empilha (&#39;B&#39;); } }
+1) Diga, em português, o que o fragmento faz. 
+Garante que “B” seja empilhado, desempilhado “A” sempre que necessário
+
+2) Escreva um fragmento de código equivalente que seja bem mais curto e mais simples.
+while{!pilhavazia () && espia() == 'A'}
+desempilha ();
+empilha ('B');
